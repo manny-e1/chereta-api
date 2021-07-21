@@ -1,19 +1,23 @@
 {
-  "name": "crew_finder_backend",
+  "name": "chereta_api",
   "version": "1.0.0",
-  "description": "An API for crew finder app",
+  "description": "An API for Chereta app",
   "main": "server.js",
   "type": "module",
   "scripts": {
+    "start": "node server.js",
     "dev": "nodemon server.js"
   },
   "author": "Ge'ez",
   "license": "ISC",
   "dependencies": {
+    "cloudinary": "^1.26.2",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "mongoose": "^5.13.2"
+    "mongoose": "^5.13.2",
+    "multer": "^1.4.2",
+    "multer-storage-cloudinary": "^4.0.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.12"
