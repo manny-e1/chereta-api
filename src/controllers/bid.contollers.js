@@ -19,7 +19,7 @@ export async function httpCreateBid(req,res){
 }
 
 export async function httpGetBids(_,res){
-    return res.json(getBids());
+    return res.json(await getBids());
 }
 
 export async function httpGetHighestBid(_,res){
