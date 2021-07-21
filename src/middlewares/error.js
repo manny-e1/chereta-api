@@ -1,3 +1,5 @@
+import { ErrorResponse } from "../utils/helpers";
+
 function notFound(req,res,next){
     const error = new ErrorResponse(`Not Found - ${req.originalUrl}`, 404);
     next(error);
