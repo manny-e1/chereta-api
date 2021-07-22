@@ -8,8 +8,9 @@ export async function createItem(item){
 }
 
 export async function getItems(){
+const id = "60f900ef8cc96b241d0c3705";
     return ItemModel
-            .find()
+            .findById(id)
             .select('_id owner title description deadline coverImage')
             .populate('owner', 'fullName avatar')
 }
