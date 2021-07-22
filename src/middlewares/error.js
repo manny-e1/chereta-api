@@ -1,7 +1,7 @@
 import { ErrorResponse } from "../utils/helpers.js";
 
 function notFound(req,res,next){
-    const error = new ErrorResponse(`Not Found - ${req.originalUrl}`, 404);
+    const error = new ErrorResponse(`Not Found - ${req.method} ${req.originalUrl}`, 404);
     next(error);
 }
 

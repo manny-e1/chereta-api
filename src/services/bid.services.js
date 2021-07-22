@@ -15,7 +15,7 @@ export async function getBids(){
 
 export async function highestBid(){
     return BidModel
-            .find()
+            .findOne({"item":"60f900ef8cc96b241d0c3705"})
             .sort({"amount":-1})
             .limit(1)
             .populate('bidder')

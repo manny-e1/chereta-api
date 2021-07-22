@@ -1,3 +1,4 @@
+import BidModel from "../models/bid.model.js";
 import { createBid, getBids, highestBid } from "../services/bid.services.js";
 import { ErrorResponse } from "../utils/helpers.js";
 
@@ -26,4 +27,8 @@ export async function httpGetHighestBid(_,res){
     return res.json(await highestBid());
 }
 
+export async function httpDeleteAllBids(_,res){
+    await BidModel.deleteMany();
+    res.status(204);
+}
 
